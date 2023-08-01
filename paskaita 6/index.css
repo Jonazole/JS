@@ -1,0 +1,9 @@
+.hidden {
+    display: none;
+}
+.good {
+    box-shadow: -5px -5px 5px green;
+}
+.bad {
+    box-shadow: -5px -5px 5px red;
+}
