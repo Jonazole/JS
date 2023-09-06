@@ -1,19 +1,40 @@
-console.log("Rima");
+function createTable() {
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = "vipCheckBox";
+    const label = document.createElement("label");
+    label.textContent = "Filter VIP";
+    label.setAttribute("for", "vipCheckbox");    
+    const table = document.createElement('table');
+    const tHead = document.createElement('thead');
+    const tr = document.createElement('tr');
+
+
+
+
+
+
+
+}
+
+createTable();
+
 const body = document.querySelector("body");
 
 async function getData() {
     try {
-        const response = await fetch("https://magnetic-melon-yam.glitch.me/");
+        const response = await fetch("(https://magnetic-melon-yam.glitch.me/");
         console.log(response);
         if (response.ok) {
             const data = await response.json();
-            for (let index = 0; index < data.length; index++) {
-                generateData(data[index]);
+            data.forEach((robot) => {
+                generateData(robot);
+            });
                 
             }
-        } else 
-        {console.log("Error");}
-    } catch (error) {
+        }  
+        
+        catch (error) {
         console.log(error);
     }
 }
